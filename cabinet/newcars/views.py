@@ -14,7 +14,11 @@ class NewCarViewSet(ModelViewSet):
     queryset = NewCar.objects.all()
     serializer_class = NewCarSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
+    permission_classes = [IsAuthenticated]
     filter_fields = ['price']
     search_fields = ['vin', 'model']
     ordering_fields = ['price']
-    # permission_classes = [IsAuthenticated]
+
+
+def auth(request):
+    return render(request, 'oauth.html')
