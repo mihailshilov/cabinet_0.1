@@ -21,7 +21,7 @@ from newcars.views import NewCarViewSet
 
 router = SimpleRouter()
 
-router.register('newcars', NewCarViewSet)
+router.register(r'newcar', NewCarViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

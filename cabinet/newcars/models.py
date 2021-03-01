@@ -15,4 +15,4 @@ class NewCar(models.Model):
     link = models.CharField(max_length=255, verbose_name='Ссылка')
 
     def __str__(self):
-        return self.model
+        return f'{self.model} - {self.con}'
